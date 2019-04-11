@@ -13,6 +13,10 @@
 	<description>Executor project for spring boot.</description>
 	<url>http://www.xuxueli.com/</url>
 
+	<properties>
+		<main.basedir>${project.basedir}/../..</main.basedir>
+	</properties>
+
 	<dependencies>
 		<!-- spring-webmvc -->
 		<dependency>

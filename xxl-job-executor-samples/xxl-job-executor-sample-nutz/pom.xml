@@ -11,6 +11,10 @@
     <artifactId>xxl-job-executor-sample-nutz</artifactId>
     <packaging>war</packaging>
 
+    <properties>
+        <main.basedir>${project.basedir}/../..</main.basedir>
+    </properties>
+
     <dependencies>
         <!-- nutz -->
         <dependency>

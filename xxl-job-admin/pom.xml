@@ -9,6 +9,22 @@
 	<artifactId>xxl-job-admin</artifactId>
 	<packaging>war</packaging>
 
+	<properties>
+		<main.basedir>${project.basedir}/..</main.basedir>
+	</properties>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/profiles/${activeProfile}</directory>
+			</resource>
+		</resources>
+	</build>
+
 	<dependencies>
 		<!-- springframe start -->
 		<dependency>
@@ -144,4 +160,33 @@
 
 	</dependencies>
 
+	<profiles>
+		<profile>
+			<id>development</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<activeProfile>development</activeProfile>
+				<prop.log.dir>${main.basedir}/logs</prop.log.dir>
+				<prop.log.level>INFO</prop.log.level>
+			</properties>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<activeProfile>test</activeProfile>
+				<prop.log.dir>/data1/logs/isc-job-admin</prop.log.dir>
+				<prop.log.level>INFO</prop.log.level>
+			</properties>
+		</profile>
+		<profile>
+			<id>production</id>
+			<properties>
+				<activeProfile>production</activeProfile>
+				<prop.log.dir>/data1/logs/isc-job-admin</prop.log.dir>
+				<prop.log.level>ERROR</prop.log.level>
+			</properties>
+		</profile>
+	</profiles>
 </project>

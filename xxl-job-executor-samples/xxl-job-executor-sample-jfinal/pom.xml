@@ -11,6 +11,10 @@
     <artifactId>xxl-job-executor-sample-jfinal</artifactId>
     <packaging>war</packaging>
 
+    <properties>
+        <main.basedir>${project.basedir}/../..</main.basedir>
+    </properties>
+
     <dependencies>
         <!-- jfinal -->
         <dependency>
