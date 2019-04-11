@@ -46,6 +46,8 @@ public class MailUtil {
 			//email.setTLS(true);		// 是否TLS校验，，某些邮箱需要TLS安全校验，同理有SSL校验
 			//email.setSSL(true);
 
+			email.setStartTLSEnabled(true);
+
 			email.setHostName(host);
 			email.setSmtpPort(Integer.valueOf(port));
 			//email.setSslSmtpPort(port);

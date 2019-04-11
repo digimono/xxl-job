@@ -5,10 +5,14 @@
     <parent>
         <groupId>com.xuxueli</groupId>
         <artifactId>xxl-job</artifactId>
-        <version>1.9.0</version>
+        <version>1.9.0.1</version>
     </parent>
     <artifactId>xxl-job-executor-samples</artifactId>
     <packaging>pom</packaging>
+
+    <properties>
+        <main.basedir>${project.basedir}/..</main.basedir>
+    </properties>
 
     <modules>
         <module>xxl-job-executor-sample-spring</module>
